@@ -9,6 +9,7 @@ export const CODECS = [
             'qsv',
             'vaapi',
             'rkmpp',
+            'axcl',
             'videotoolbox',
             'v4l2m2m'
         ]
@@ -22,6 +23,7 @@ export const CODECS = [
             'qsv',
             'vaapi',
             'rkmpp',
+            'axcl',
             'videotoolbox'
         ]
     },
@@ -102,7 +104,8 @@ export const HEVC_VP9_HW_DECODING_TYPES = [
     'nvenc',
     'qsv',
     'vaapi',
-    'rkmpp'
+    'rkmpp',
+    'axcl'
 ];
 
 /** Hardware decoders which support HEVC RExt */

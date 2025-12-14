@@ -149,7 +149,7 @@ export const Component = () => {
     }, [ config ]);
 
     const hardwareAccelType = config?.HardwareAccelerationType || HardwareAccelerationType.None;
-    const isHwaSelected = [ 'amf', 'nvenc', 'qsv', 'vaapi', 'rkmpp', 'videotoolbox' ].includes(hardwareAccelType);
+    const isHwaSelected = [ 'amf', 'nvenc', 'qsv', 'vaapi', 'rkmpp', 'videotoolbox', 'axcl' ].includes(hardwareAccelType);
 
     const availableCodecs = useMemo(() => (
         CODECS.filter(codec => codec.types.includes(hardwareAccelType))
@@ -201,6 +201,7 @@ export const Component = () => {
                                 <MenuItem value='qsv'>Intel Quicksync (QSV)</MenuItem>
                                 <MenuItem value='vaapi'>Video Acceleration API (VAAPI)</MenuItem>
                                 <MenuItem value='rkmpp'>Rockchip MPP (RKMPP)</MenuItem>
+                                <MenuItem value='axcl'>Axera AXCL</MenuItem>
                                 <MenuItem value='videotoolbox'>Apple VideoToolBox</MenuItem>
                                 <MenuItem value='v4l2m2m'>Video4Linux2 (V4L2)</MenuItem>
                             </TextField>
